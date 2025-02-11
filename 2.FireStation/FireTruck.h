@@ -4,6 +4,9 @@
 #include "Ladder.h"
 #include "Hose.h"
 
+// 전방 선언 (Forward Declaration)
+// 헤더 순환 참조를 방지하기 위해서
+class FirefighterBase;
 class FireTruck
 {
 public:
@@ -27,14 +30,14 @@ public:
 
 	const Ladder* GetLadder() const { return ladder; }
 
-	class Firefighter* GetDriver() const { return driver; }
-	void SetDriver(class Firefighter* driver) { this->driver = driver; }
+	class FirefighterBase* GetDriver() const { return driver; }
+	void SetDriver(class FirefighterBase* driver) { this->driver = driver; }
 
 	const Hose* GetHose() const { return hose; }
 	void SetHose(Hose* hose) { this->hose = hose; }
 
 private:
-	class Firefighter* driver = nullptr;
+	FirefighterBase* driver = nullptr;
 	Ladder* ladder = nullptr;
 	Hose* hose = nullptr;
 };
