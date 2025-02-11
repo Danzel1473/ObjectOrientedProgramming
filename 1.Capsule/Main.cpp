@@ -27,7 +27,7 @@ int main()
 
 	//time2.ShowTime();
 	//time2.ShowTimeInSeconds();
-
+	 
 	NameCard jang = NameCard("Jang Se Yun", "010-1111-1111", "¼­¿ï½Ã...", "Freelancer");
 	jang.ShowData();
 
